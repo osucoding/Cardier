@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D249714F2B57B44B0049EAD4 /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D249714E2B57B44B0049EAD4 /* BusinessCard.swift */; };
+		D24971522B57B5210049EAD4 /* BusinessCardPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24971512B57B5210049EAD4 /* BusinessCardPayload.swift */; };
 		D28B52112B4B42610063315E /* CardierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52102B4B42610063315E /* CardierApp.swift */; };
 		D28B52132B4B42610063315E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52122B4B42610063315E /* ContentView.swift */; };
 		D28B52152B4B42620063315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B52142B4B42620063315E /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D249714E2B57B44B0049EAD4 /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
+		D24971512B57B5210049EAD4 /* BusinessCardPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardPayload.swift; sourceTree = "<group>"; };
 		D28B520D2B4B42610063315E /* Cardier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B52102B4B42610063315E /* CardierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardierApp.swift; sourceTree = "<group>"; };
 		D28B52122B4B42610063315E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D249714C2B57B41F0049EAD4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D249714D2B57B4370049EAD4 /* components */,
+				D28B52122B4B42610063315E /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D249714D2B57B4370049EAD4 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D249714E2B57B44B0049EAD4 /* BusinessCard.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D24971502B57B5050049EAD4 /* dtos */ = {
+			isa = PBXGroup;
+			children = (
+				D24971512B57B5210049EAD4 /* BusinessCardPayload.swift */,
+			);
+			path = dtos;
+			sourceTree = "<group>";
+		};
 		D28B52042B4B42610063315E = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +84,9 @@
 		D28B520F2B4B42610063315E /* Cardier */ = {
 			isa = PBXGroup;
 			children = (
+				D24971502B57B5050049EAD4 /* dtos */,
 				D28B52102B4B42610063315E /* CardierApp.swift */,
-				D28B52122B4B42610063315E /* ContentView.swift */,
+				D249714C2B57B41F0049EAD4 /* views */,
 				D28B52142B4B42620063315E /* Assets.xcassets */,
 				D28B52192B4B42620063315E /* Persistence.swift */,
 				D28B521B2B4B42620063315E /* Cardier.xcdatamodeld */,
@@ -145,7 +175,9 @@
 			files = (
 				D28B521A2B4B42620063315E /* Persistence.swift in Sources */,
 				D28B52132B4B42610063315E /* ContentView.swift in Sources */,
+				D249714F2B57B44B0049EAD4 /* BusinessCard.swift in Sources */,
 				D28B521D2B4B42620063315E /* Cardier.xcdatamodeld in Sources */,
+				D24971522B57B5210049EAD4 /* BusinessCardPayload.swift in Sources */,
 				D28B52112B4B42610063315E /* CardierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,11 +310,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2024011701;
 				DEVELOPMENT_ASSET_PATHS = "\"Cardier/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JDGUK4DRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cardier;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -308,11 +341,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2024011701;
 				DEVELOPMENT_ASSET_PATHS = "\"Cardier/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JDGUK4DRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cardier;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
