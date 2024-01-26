@@ -46,9 +46,9 @@ struct BusinessCard: View {
 
             .padding()
             .frame(width: 300, height: 400)
+            .background(Color(uiColor: .systemBackground))
             .cornerRadius(15)
-            .background(Color(uiColor: .green))
-            .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 5)
+            .shadow(color: Color.gray.opacity(0.5), radius: 7, x: 0, y: 5)
         }
     }
 }
