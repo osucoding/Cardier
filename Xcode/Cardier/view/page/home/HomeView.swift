@@ -29,9 +29,14 @@ struct HomeView: View {
                             }
                         }
                         .padding()
+                        // "snap" card into view
+                        .scrollTargetLayout()
                     }
                     .scrollIndicators(.hidden)
+                    // "snap" card into view
+                    .scrollTargetBehavior(.viewAligned)
                     .padding()
+
                 }
                 .navigationTitle("My Business Cards")
                 .navigationBarTitleDisplayMode(.large)
