@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct BusinessCard: View {
-    
+
     private let screenWidth = UIScreen.main.bounds.width
-    
+
     let cardPayload: BusinessCardPayload
-    
+
     private let rotationValue: Double = 270
-    
+
     var body: some View {
         VStack {
             VStack {
@@ -25,14 +25,14 @@ struct BusinessCard: View {
                     Spacer()
                     EmptyView()
                 }
-                
+
                 Spacer()
-                
+
                 HStack {
                     EmptyView()
-                    
+
                     Spacer()
-                    
+
                     VStack(alignment: .leading) {
                         Text(cardPayload.displayName)
                         Text(cardPayload.phone)
@@ -43,7 +43,7 @@ struct BusinessCard: View {
                     .frame(minHeight: 200)
                 }
             }
-            
+
             .padding()
             .frame(width: 300, height: 400)
             .cornerRadius(15)

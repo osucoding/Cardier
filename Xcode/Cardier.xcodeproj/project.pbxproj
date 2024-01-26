@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D265790D2B640CAF00895CDA /* BusinessCardPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */; };
+		D265790F2B640CEF00895CDA /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265790E2B640CEF00895CDA /* BusinessCard.swift */; };
 		D28B52112B4B42610063315E /* CardierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52102B4B42610063315E /* CardierApp.swift */; };
 		D28B52132B4B42610063315E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52122B4B42610063315E /* ContentView.swift */; };
 		D28B52152B4B42620063315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B52142B4B42620063315E /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardPayload.swift; sourceTree = "<group>"; };
+		D265790E2B640CEF00895CDA /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
 		D28B520D2B4B42610063315E /* Cardier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B52102B4B42610063315E /* CardierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardierApp.swift; sourceTree = "<group>"; };
 		D28B52122B4B42610063315E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D26579102B640D4E00895CDA /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		D26579112B640D6200895CDA /* component */ = {
+			isa = PBXGroup;
+			children = (
+				D265790E2B640CEF00895CDA /* BusinessCard.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		D26579122B640D7300895CDA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D28B52122B4B42610063315E /* ContentView.swift */,
+				D26579112B640D6200895CDA /* component */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		D28B52042B4B42610063315E = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				D28B52102B4B42610063315E /* CardierApp.swift */,
-				D28B52122B4B42610063315E /* ContentView.swift */,
+				D26579102B640D4E00895CDA /* dto */,
+				D26579122B640D7300895CDA /* view */,
 				D28B52142B4B42620063315E /* Assets.xcassets */,
 				D28B52192B4B42620063315E /* Persistence.swift */,
 				D28B521B2B4B42620063315E /* Cardier.xcdatamodeld */,
@@ -143,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D265790D2B640CAF00895CDA /* BusinessCardPayload.swift in Sources */,
 				D28B521A2B4B42620063315E /* Persistence.swift in Sources */,
 				D28B52132B4B42610063315E /* ContentView.swift in Sources */,
+				D265790F2B640CEF00895CDA /* BusinessCard.swift in Sources */,
 				D28B521D2B4B42620063315E /* Cardier.xcdatamodeld in Sources */,
 				D28B52112B4B42610063315E /* CardierApp.swift in Sources */,
 			);

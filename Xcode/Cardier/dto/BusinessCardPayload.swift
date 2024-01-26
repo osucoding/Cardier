@@ -2,7 +2,7 @@
 //  BusinessCardPayload.swift
 //  Cardier
 //
-//  Created by John Choi on 1/17/24.
+//  Created by John Choi on 1/26/24.
 //
 
 import Foundation
