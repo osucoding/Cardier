@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D265790D2B640CAF00895CDA /* BusinessCardPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */; };
+		D265790F2B640CEF00895CDA /* BusinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265790E2B640CEF00895CDA /* BusinessCard.swift */; };
+		D26579142B64102E00895CDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26579132B64102E00895CDA /* ContentView.swift */; };
+		D26579182B6410C500895CDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26579172B6410C500895CDA /* HomeView.swift */; };
+		D265791A2B6410DC00895CDA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26579192B6410DC00895CDA /* MyPageView.swift */; };
 		D28B52112B4B42610063315E /* CardierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52102B4B42610063315E /* CardierApp.swift */; };
-		D28B52132B4B42610063315E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52122B4B42610063315E /* ContentView.swift */; };
+		D28B52132B4B42610063315E /* ContentViewOriginal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52122B4B42610063315E /* ContentViewOriginal.swift */; };
 		D28B52152B4B42620063315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B52142B4B42620063315E /* Assets.xcassets */; };
 		D28B52182B4B42620063315E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28B52172B4B42620063315E /* Preview Assets.xcassets */; };
 		D28B521A2B4B42620063315E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B52192B4B42620063315E /* Persistence.swift */; };
@@ -16,9 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardPayload.swift; sourceTree = "<group>"; };
+		D265790E2B640CEF00895CDA /* BusinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCard.swift; sourceTree = "<group>"; };
+		D26579132B64102E00895CDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D26579172B6410C500895CDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D26579192B6410DC00895CDA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		D28B520D2B4B42610063315E /* Cardier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B52102B4B42610063315E /* CardierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardierApp.swift; sourceTree = "<group>"; };
-		D28B52122B4B42610063315E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D28B52122B4B42610063315E /* ContentViewOriginal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewOriginal.swift; sourceTree = "<group>"; };
 		D28B52142B4B42620063315E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28B52172B4B42620063315E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D28B52192B4B42620063315E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -36,6 +46,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D26579102B640D4E00895CDA /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				D265790C2B640CAF00895CDA /* BusinessCardPayload.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		D26579112B640D6200895CDA /* component */ = {
+			isa = PBXGroup;
+			children = (
+				D265790E2B640CEF00895CDA /* BusinessCard.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		D26579122B640D7300895CDA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D26579132B64102E00895CDA /* ContentView.swift */,
+				D26579162B6410BA00895CDA /* page */,
+				D26579112B640D6200895CDA /* component */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D26579152B64104600895CDA /* deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				D28B52122B4B42610063315E /* ContentViewOriginal.swift */,
+			);
+			path = deprecated;
+			sourceTree = "<group>";
+		};
+		D26579162B6410BA00895CDA /* page */ = {
+			isa = PBXGroup;
+			children = (
+				D265791B2B64116500895CDA /* home */,
+				D265791C2B64117500895CDA /* my-page */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		D265791B2B64116500895CDA /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D26579172B6410C500895CDA /* HomeView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		D265791C2B64117500895CDA /* my-page */ = {
+			isa = PBXGroup;
+			children = (
+				D26579192B6410DC00895CDA /* MyPageView.swift */,
+			);
+			path = "my-page";
+			sourceTree = "<group>";
+		};
 		D28B52042B4B42610063315E = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				D28B52102B4B42610063315E /* CardierApp.swift */,
-				D28B52122B4B42610063315E /* ContentView.swift */,
+				D26579102B640D4E00895CDA /* dto */,
+				D26579122B640D7300895CDA /* view */,
 				D28B52142B4B42620063315E /* Assets.xcassets */,
 				D28B52192B4B42620063315E /* Persistence.swift */,
+				D26579152B64104600895CDA /* deprecated */,
 				D28B521B2B4B42620063315E /* Cardier.xcdatamodeld */,
 				D28B52162B4B42620063315E /* Preview Content */,
 			);
@@ -143,8 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D265790D2B640CAF00895CDA /* BusinessCardPayload.swift in Sources */,
 				D28B521A2B4B42620063315E /* Persistence.swift in Sources */,
-				D28B52132B4B42610063315E /* ContentView.swift in Sources */,
+				D26579142B64102E00895CDA /* ContentView.swift in Sources */,
+				D28B52132B4B42610063315E /* ContentViewOriginal.swift in Sources */,
+				D265790F2B640CEF00895CDA /* BusinessCard.swift in Sources */,
+				D265791A2B6410DC00895CDA /* MyPageView.swift in Sources */,
+				D26579182B6410C500895CDA /* HomeView.swift in Sources */,
 				D28B521D2B4B42620063315E /* Cardier.xcdatamodeld in Sources */,
 				D28B52112B4B42610063315E /* CardierApp.swift in Sources */,
 			);
@@ -278,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2024012601;
 				DEVELOPMENT_ASSET_PATHS = "\"Cardier/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JDGUK4DRH;
 				ENABLE_PREVIEWS = YES;
@@ -309,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2024012601;
 				DEVELOPMENT_ASSET_PATHS = "\"Cardier/Preview Content\"";
 				DEVELOPMENT_TEAM = 2JDGUK4DRH;
 				ENABLE_PREVIEWS = YES;

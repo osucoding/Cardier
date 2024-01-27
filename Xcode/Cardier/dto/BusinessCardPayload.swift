@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct BusinessCardPayload {
+struct BusinessCardPayload: Identifiable {
+    var id: String { displayName }
+    
     var displayName: String
 
     var email: String
