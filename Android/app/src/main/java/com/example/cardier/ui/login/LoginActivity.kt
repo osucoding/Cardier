@@ -8,15 +8,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.cardier.ui.main.MainActivity
-import com.example.cardier.ui.signup.SignUpActivity
+import com.example.cardier.ui.item.MainActivity
 
+import com.example.cardier.R
+import com.example.cardier.databinding.ActivityLoginBinding
+import com.example.cardier.ui.item.MyApplication
+import com.example.cardier.ui.signup.SignUpActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-
-import com.example.cardier.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -59,16 +60,17 @@ class LoginActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){ task: Task<AuthResult> ->
                     // If authenticate successful run the main activity
-                    if (task.isSuccessful && mAuth.currentUser?.isEmailVerified == true) {
+                    //if (task.isSuccessful && mAuth.currentUser?.isEmailVerified == true)
+                    if (task.isSuccessful){
                         Log.d(TAG, "signInWithEmail:success")
                         MyApplication.email = email
                         val intent= Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }
-                    else if (mAuth.currentUser?.isEmailVerified == false) {
+                    /*else if (mAuth.currentUser?.isEmailVerified == false) {
                         Toast.makeText(this, "Email not verified", Toast.LENGTH_SHORT).show()
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    }
+                    }*/
                     else {
                         var emailClear = (findViewById<View>(R.id.username) as EditText)
                         var passwordClear = (findViewById<View>(R.id.password) as EditText)
@@ -78,7 +80,6 @@ class LoginActivity : AppCompatActivity() {
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
                     }
                 }
+            }
         }
-    }
-
 }
