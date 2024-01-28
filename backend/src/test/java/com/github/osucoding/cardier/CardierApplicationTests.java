@@ -1,4 +1,4 @@
-package osu.example.cardier;
+package com.github.osucoding.cardier;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
