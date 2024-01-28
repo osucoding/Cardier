@@ -1,4 +1,4 @@
-package osu.example.cardier;
+package com.github.osucoding.cardier;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

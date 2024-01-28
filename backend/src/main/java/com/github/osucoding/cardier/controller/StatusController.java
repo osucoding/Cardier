@@ -1,4 +1,4 @@
-package osu.example.cardier.controller;
+package com.github.osucoding.cardier.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
