@@ -146,7 +146,8 @@ iOSInjectionProject/
 hs_err_pid*
 replay_pid*
 
-#do not include json files
-*.json
+#do not include firebase json files
+google-services.json
 
 .idea/
+
