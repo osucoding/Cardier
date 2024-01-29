@@ -8,16 +8,15 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>osu.example</groupId>
+	<groupId>com.github.osucoding</groupId>
 	<artifactId>cardier</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cardier</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Cardier Backend Server</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
