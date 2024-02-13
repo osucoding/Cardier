@@ -1,1 +1,3 @@
-
+gcp:
+  firebase:
+    serviceAccount: secrets/cardier-firebase-service-account.json
