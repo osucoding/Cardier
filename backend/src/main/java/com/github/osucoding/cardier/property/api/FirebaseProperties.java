@@ -18,7 +18,6 @@ public class FirebaseProperties {
 
     public Resource getServiceAccountAsResource() {
         log.info("Loading resource from path: {}", new File(serviceAccount).getAbsolutePath());
-
         return new FileSystemResource(serviceAccount);
     }
 }

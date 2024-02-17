@@ -34,3 +34,6 @@ build/
 
 ### Secrets ###
 secrets/
+
+### Don't check in TestController.java ###
+TestController.java
