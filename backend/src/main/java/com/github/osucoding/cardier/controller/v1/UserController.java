@@ -38,6 +38,9 @@ public class UserController {
 
     @PutMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> addUser(@RequestBody User newUser, @RequestParam("id") final String id) {
+        if (!newUser.userPayloadValid()) {
+            return ResponseEntity.badRequest().build();
+        }
         var optionalToken = firebaseAuthService.decodeIdToken(id);
         if (optionalToken.isPresent()) {
             var addSucceeded = firestoreDatabaseService.addUser(newUser);

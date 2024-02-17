@@ -21,4 +21,12 @@ public class User {
     private boolean isVerified;
 
     private boolean isAdmin;
+
+    public boolean userPayloadValid() {
+        return this.getId() != null &&
+                this.getUsername() != null &&
+                this.getFirstName() != null &&
+                this.getLastName() != null &&
+                this.getEmail() != null;
+    }
 }
