@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+
+gcp:
+  firebase:
+    serviceAccountPath: dummy-service-account-path
