@@ -23,25 +23,23 @@ public class FirestoreDatabaseDao {
     private final String USERS_COLLECTION = "users";
 
     public Optional<User> getUserData(final String id) {
-        DocumentReference docRef = db.collection(USERS_COLLECTION).document(id);
-        // asynchronously retrieve the document
-        ApiFuture<DocumentSnapshot> future = docRef.get();
-        // block on response
-        DocumentSnapshot document;
         try {
-            document = future.get();
+            final DocumentReference docRef = db.collection(USERS_COLLECTION)
+                    .document(id);
+            // asynchronously retrieve the document
+            final ApiFuture<DocumentSnapshot> future = docRef.get();
+            // block on response
+            final DocumentSnapshot document = future.get();
+            if (document.exists()) {
+                // convert document to POJO
+                final User user = document.toObject(User.class);
+                return Optional.ofNullable(user);
+            } else {
+                log.warn("No such document!");
+                return Optional.empty();
+            }
         } catch (InterruptedException | ExecutionException e) {
             log.error("Exception happened while retrieving data, e", e);
-            return Optional.empty();
-        }
-        User user;
-        assert document != null;
-        if (document.exists()) {
-            // convert document to POJO
-            user = document.toObject(User.class);
-            return Optional.ofNullable(user);
-        } else {
-            log.warn("No such document!");
             return Optional.empty();
         }
     }
@@ -51,7 +49,9 @@ public class FirestoreDatabaseDao {
     }
 
     public boolean insertUserData(final User newUser) {
-        ApiFuture<WriteResult> future = db.collection(USERS_COLLECTION).document(newUser.getId()).set(newUser);
+        final ApiFuture<WriteResult> future = db.collection(USERS_COLLECTION)
+                .document(newUser.getId())
+                .set(newUser);
         try {
             log.info("User inserted at: " + future.get().getUpdateTime());
             return true;
